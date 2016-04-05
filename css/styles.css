@@ -1,0 +1,10 @@
+.jumbotron {
+  text-align: center;
+  background-color: #319b66;
+  color: #ffffff;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
