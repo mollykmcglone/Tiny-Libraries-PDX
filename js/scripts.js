@@ -54,6 +54,7 @@ $("#new-books").append('<div class="new-book">' +
 });
 
 //add new books to the registered Library//
+//have questions about how / if we need to define book values separately without doing a (this).find//
   $(".new-book").each(function() {
     var titleInput = $(this).find("input#new-title").val();
     var authorInput = $(this).find("input#new-author").val();
@@ -62,3 +63,4 @@ $("#new-books").append('<div class="new-book">' +
   });
 
     $("ul#libraryinventory").append("<li><span class='book'>" + newBook.fullName() + "</span></li>");
+});
