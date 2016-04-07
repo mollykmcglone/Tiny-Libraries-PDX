@@ -4,7 +4,26 @@
   color: #ffffff;
 }
 
-img {
-    width: 100%;
-    height: auto;
+.photo {
+  max-width: 100%;
+  height: auto;
 }
+
+.map {
+  display: block;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2{
+  text-align: center;
+}
+
+
+
+/*.photo .img-responsive {
+  display: block;
+  width: auto;
+  max-height: 100%;
+}*/
