@@ -27,3 +27,7 @@ h2{
   width: auto;
   max-height: 100%;
 }*/
+
+#add-books {
+  display: none;
+}
