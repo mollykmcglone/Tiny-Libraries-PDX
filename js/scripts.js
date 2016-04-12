@@ -5,7 +5,7 @@ function Contact(first, last, email, comment) {
   this.commentText = comment;
 }
 
-function Library(name, street, city, state, zip) {
+function Library(name, street, city, state, zip, inventory) {
   this.libraryName = name;
   this.street = street;
   this.city = city;
@@ -29,6 +29,15 @@ $(document).ready(function() {
     var stateInput = $("input#new-state").val();
     var zipInput = $("input#new-zip").val();
     var newLibrary = new Library(nameInput, streetInput, cityInput, stateInput, zipInput);
+
+    var sherman = new Library("Sherman", "2024 SE Sherman St", "Portland", "OR", "97214");
+    sherman.inventory.push["Gulliver's Travels", "Breakfast of Champions", "Catch 22", "Pride and Prejudice"]
+
+    var main = new Library("Main", "1307 SE Main", "Portland", "OR", "97214");
+
+    var market = new Library("Market", "1738 SE 33rd Ave", "Portland", "OR", "97214");
+
+    var ladd = new Library("Ladd", "1928 SE Ladd", "Portland", "OR", "97214");
 
     $("ul#libraries").append("<li><span class='library'>" + newLibrary.libraryName + "</span></li>");
 
