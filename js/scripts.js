@@ -7,20 +7,11 @@ function Library(name, street, city, state, zip) {
   this.inventory = [];
 }
 
-function Books(title, author) {
-  this.bookTitle = title;
-  this.author = author;
+
+Library.prototype.address = function() {
+  return this.street + ", " + this.city + ", " + this.state + ", " + this.zip;
 }
 
-// Library.prototype.fullInventory = function() {
-//   return this.libaryName + ", " + this.street + ", " this.zip + ", " + this.inventory;
-// }
-//
-// Book.prototype.fullName = function() {
-//   return this.title + ", " + this.author;
-// }
-
-// <script src="http://maps.googleapis.com/maps/api/js?address&key=AIzaSyDdmUrcEcDKnPgsfRXhB3dRLvYknXSSNzo"></script>
 
 $(document).ready(function() {
   $("form#new-library").submit(function(event) {
@@ -30,28 +21,14 @@ $(document).ready(function() {
     var cityInput = $("input#new-city").val();
     var stateInput = $("input#new-state").val();
     var zipInput = $("input#new-zip").val();
-    var newlibrary = new Library(streetInput, cityInput, stateInput, zipInput);
-    $("#add-books").show();
-  });
+    var newLibrary = new Library(nameInput, streetInput, cityInput, stateInput, zipInput);
 
-  $(".add-book").each(function() {
-    var titleInput = $(this).find("input#new-title").val();
-    var authorInput = $(this).find("input#new-author").val();
-    var newBook = new Book(titleInput, authorInput);
-    newLibrary.inventory.push(newBook)
-  });
-    $("ul#libraryinventory").append("<li><span class='book'>" + newBook.fullName() + "</span></li>");
-  });
+    $("ul#libraries").append("<li><span class='library'>" + newLibrary.libraryName + "</span></li>");
 
-  $("#more-books").click(function() {
-  $("#add-books").append('<div class="new-book">' +
-                                '<div class="form-group">' +
-                                  '<label for="new-title">Title</label>' +
-                                  '<input type="text" class="form-control new-type">' +
-                                '</div>' +
-                                '<div class="form-group">' +
-                                  '<label for="new-author">Author</label>' +
-                                  '<input type="text" class="form-control new-type">' +
-                                '</div>' +
-                                '</div>');
+    $(".library").last().click(function() {
+      $("#show-library").show();
+      $("#show-library h2").text(newLibrary.libraryName);
+      $(".library-address").text(newLibrary.address());
+      });
+    });
   });
