@@ -6,67 +6,61 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.2.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Tiny Library Directory</title>
+    <title>Contact Librarian</title>
   </head>
-
+  <body>
   <div class="container">
     <header>
       <div class="my-nav">
           <ul>
             <a href="index.html"><li>Home</li></a>
             <a href="map.html"><li>Find Library</li></a>
+            <a href="registerlibrary.html"><li>Register Library</li></a>
             <a href="PLACEHOLDER"><li>Browse Books</li></a>
-            <a href="contact.html"><li>Contact Librarian</li></a>
           </ul>
         </div>
       </header>
   </div>
-  <body>
+
   <div class ="jumbotron">
-      <h1>Tiny Library Registry</h1>
+      <h1>Contact Librarian</h1>
   </div>
   <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h2>Register Your Libary:</h2>
+          <h2>Contact a Libarian:</h2>
 
-          <form id="new-library">
+          <form id="contact">
             <div class="form-group">
-              <label for="new-name">Libary Name</label>
-              <input type="text" class="form-control" id="new-name">
+              <label for="first-name">First Name</label>
+              <input type="text" class="form-control" id="first-name">
             </div>
             <div class="form-group">
-              <label for="new-street">Street Address</label>
-              <input type="text" class="form-control" id="new-street">
+              <label for="last-name">Last Name</label>
+              <input type="text" class="form-control" id="last-name">
             </div>
             <div class="form-group">
-              <label for="new-city">City</label>
-              <input type="text" class="form-control" id="new-city">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email">
             </div>
-            <div class="form-group">
+            <label for="comment">Comment</label>
+            <input type="text" class="form-control" rows="3" id="comment">
+            <!-- <div class="form-group">
               <label for="new-state">State</label>
               <input type="text" class="form-control" id="new-state">
             </div>
             <div class="form-group">
               <label for="new-zip">Zip</label>
               <input type="text" class="form-control" id="new-zip">
-            </div>
-            <button type="submit" class="btn">Register Library</button>
+            </div> -->
+            <button type="submit" class="btn">Submit</button>
           </form>
-
-          <h2>Libraries:</h2>
-          <ul id="libraries">
-
-          </ul>
-        </div>
-
-        <div class="col-md-6">
-          <div id="show-library">
-            <h2></h2>
-            <p>Address: <span class="library-address"></span></p>
-          </div>
-        </div>
       </div>
+    </div>
+    <div id="thanks">
+        <h2>Thank you! A Librarian will contact you soon!</h2>
+    </div>
+
       <footer>
         <p>2016 (c) by Niki Garner, Hailey Murto, Molly McGlone and Amber Ward</p>
       </footer>

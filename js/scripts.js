@@ -1,3 +1,10 @@
+function Contact(first, last, email, comment) {
+  this.firstName = first;
+  this.lastName = last;
+  this.emailAddress = email;
+  this.commentText = comment;
+}
+
 function Library(name, street, city, state, zip) {
   this.libraryName = name;
   this.street = street;
@@ -31,4 +38,15 @@ $(document).ready(function() {
       $(".library-address").text(newLibrary.address());
       });
     });
+
+  $("form#contact").submit(function(event) {
+    event.preventDefault();
+    var firstnameInput = $("input#first-name").val();
+    var lastnameInput = $("input#last-name").val();
+    var emailInput = $("input#email").val();
+    var commentInput = $("input#comment").val();
+    var newContact = new Contact(firstnameInput, lastnameInput, emailInput, commentInput);
+    console.log(firstnameInput);
+    $("#thanks").show();
   });
+});
