@@ -1,7 +1,20 @@
+.col-md-4 {
+  text-align: center;
+}
+
 .jumbotron {
   text-align: center;
   background-color: #319b66;
   color: #ffffff;
+}
+
+footer {
+  /*background-color: #fff;
+  color: #000;*/
+  margin: 6em 0px 0px 0px;
+  padding: 1em;
+  text-align: center;
+
 }
 
 .photo {
@@ -20,6 +33,11 @@ h2{
   text-align: center;
 }
 
+header {
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+
 #show-library {
   display: none;
 }
@@ -33,6 +51,46 @@ h2{
   text-decoration: underline;
 }
 
-/*#markerMap {
+
+li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+}
+
+.my-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;*/
+  padding-bottom: 2em;
+  overflow: hidden;
+}
+
+.my-nav ul li {
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  padding-right: 2em;
+}
+
+.my-nav ul a li {
+  display: block;
+  color: #319b66;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/*Change the link color to #111 (black) on hover*/
+.my-nav a:hover li {
+  color: #31819b;
+}
+
+#thanks {
   display: none;
-}*/
+}
+
+button {
+  margin-top: 1em;
+}
