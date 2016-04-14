@@ -46,7 +46,7 @@ $(document).ready(function() {
       $("#show-library h2").text(newLibrary.libraryName);
       $(".library-address").text(newLibrary.address());
       $(".markerMap").show();
-      // $(".mark").text("src='https://maps.googleapis.com/maps/api/staticmap?center=City+Hall,Portland,OR&zoom=12&size=400x400&markers=color:blue| + newLibrary.marker() + &key=AIzaSyAUxPwnXOABnJyqhafsTjDQPe3KzJThYG0'");
+      // $(".mark").html("<img src='https://maps.googleapis.com/maps/api/staticmap?center=City+Hall,Portland,OR&zoom=12&size=400x400&markers=color:blue|'+ Library.marker + '&key=AIzaSyAUxPwnXOABnJyqhafsTjDQPe3KzJThYG0'>");
       });
     });
 
