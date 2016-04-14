@@ -94,3 +94,7 @@ li {
 button {
   margin-top: 1em;
 }
+
+.markerMap {
+  display: none;
+}
