@@ -19,6 +19,14 @@ Library.prototype.address = function() {
   return this.street + ", " + this.city + ", " + this.state + ", " + this.zip;
 }
 
+Library.prototype.marker = function() {
+var mapLocation = this.street + "+" + this.city + "+" + this.state;
+var newMarker= mapLocation.replace(/ /g,"+");
+console.log(newMarker);
+return newMarker;
+}
+
+// Register a Library
 
 $(document).ready(function() {
   $("form#new-library").submit(function(event) {
@@ -41,10 +49,13 @@ $(document).ready(function() {
 
     $("ul#libraries").append("<li><span class='library'>" + newLibrary.libraryName + "</span></li>");
 
+// Shows library's address and map
     $(".library").last().click(function() {
       $("#show-library").show();
       $("#show-library h2").text(newLibrary.libraryName);
       $(".library-address").text(newLibrary.address());
+      $(".markerMap").show();
+      // $(".mark").html("<img src='https://maps.googleapis.com/maps/api/staticmap?center=City+Hall,Portland,OR&zoom=12&size=400x400&markers=color:blue|'+ Library.marker + '&key=AIzaSyAUxPwnXOABnJyqhafsTjDQPe3KzJThYG0'>");
       });
     });
 
