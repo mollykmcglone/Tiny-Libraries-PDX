@@ -11,14 +11,17 @@ function Library(name, street, city, state, zip, inventory) {
   this.city = city;
   this.state = state;
   this.zip = zip;
-  this.inventory = [];
+  this.inventory = inventory;
 }
 
+// var inventoryBooks = function(inventory) {
+//   return this.inventory.replace(""," ");
+//   console.log(inventoryBooks);
+// }
 
 Library.prototype.address = function() {
-  return this.street + ", " + this.city + ", " + this.state + ", " + this.zip;
+  return this.street + ", " + this.city + ", " + this.state + ", " + this.zip + ", " + this.inventory;
 }
-
 
 $(document).ready(function() {
   $("form#new-library").submit(function(event) {
@@ -28,25 +31,25 @@ $(document).ready(function() {
     var cityInput = $("input#new-city").val();
     var stateInput = $("input#new-state").val();
     var zipInput = $("input#new-zip").val();
-    var newLibrary = new Library(nameInput, streetInput, cityInput, stateInput, zipInput);
+    var book1 = $("input#new-book1").val();
+    var book2 = $("input#new-book2").val();
+    var book3 = $("input#new-book3").val();
 
-    var sherman = new Library("Sherman", "2024 SE Sherman St", "Portland", "OR", "97214");
-    sherman.inventory.push["Gulliver's Travels", "Breakfast of Champions", "Catch 22", "Pride and Prejudice"]
-
-    var main = new Library("Main", "1307 SE Main", "Portland", "OR", "97214");
-
-    var market = new Library("Market", "1738 SE 33rd Ave", "Portland", "OR", "97214");
-
-    var ladd = new Library("Ladd", "1928 SE Ladd", "Portland", "OR", "97214");
+    var newLibrary = new Library(nameInput, streetInput, cityInput, stateInput, zipInput, [book1, book2, book3]);
 
     $("ul#libraries").append("<li><span class='library'>" + newLibrary.libraryName + "</span></li>");
+
+    $("ul#bookiebobs").append("<li><span class='bookies'>" + newLibrary.inventory + "</span></li>");
 
     $(".library").last().click(function() {
       $("#show-library").show();
       $("#show-library h2").text(newLibrary.libraryName);
       $(".library-address").text(newLibrary.address());
-      });
+
     });
+});
+
+
 
   $("form#contact").submit(function(event) {
     event.preventDefault();

@@ -1,4 +1,4 @@
-.col-md-4 {
+#home .col-md-4 {
   text-align: center;
 }
 
@@ -29,9 +29,9 @@ footer {
   margin-right: auto;
 }
 
-h2{
+/*h2{
   text-align: center;
-}
+}*/
 
 header {
   margin-bottom: 3em;
