@@ -51,6 +51,7 @@ header {
   text-decoration: underline;
 }
 
+
 li {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
@@ -92,4 +93,8 @@ li {
 
 button {
   margin-top: 1em;
+}
+
+.markerMap {
+  display: none;
 }
